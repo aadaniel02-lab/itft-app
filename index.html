@@ -207,9 +207,19 @@ h1,h2,h3{font-family:var(--f);letter-spacing:-.04em}
 .lead .num{font-size:12px;font-weight:700;color:var(--mute);margin-top:6px;letter-spacing:.06em}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:99px;border:1.5px solid var(--line);color:var(--bone)}
-.chip.a-none{background:var(--lime);border-color:var(--lime);color:var(--ink)}
-.chip.a-few{background:var(--blue);border-color:var(--blue);color:#fff}
-.chip.a-many{background:var(--surf2);border-color:var(--surf2);color:var(--mute)}
+.chip.a-none{border-color:var(--lime);color:var(--lime)}
+.chip.a-few{border-color:#7F9BFF;color:#9DB3FF}
+.chip.a-many{border-color:var(--line);color:var(--mute)}
+.chip.r-hot{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.chip.r-warm{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.r-cold{background:var(--surf2);border-color:var(--surf2);color:var(--mute)}
+.sig{font-size:13.5px;line-height:1.45;color:#C9C9CF}
+.sig b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:3px}
+.tiny{display:flex;justify-content:center;margin-top:-2px}
+.lnk{font-size:13px;font-weight:600;color:var(--mute);text-decoration:underline;text-underline-offset:3px;padding:4px 8px}
+.fu{background:var(--surf);border-radius:30px;padding:18px;display:grid;gap:12px;border:1.5px solid var(--blue);animation:rise .5s var(--ease) both}
+.fu h4{font-size:19px;font-weight:800;letter-spacing:-.03em}
+.fu .meta{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9DB3FF}
 .chip.a-unk{border-style:dashed;color:var(--mute)}
 .lead .why{font-size:14.5px;line-height:1.45;color:#C9C9CF}
 .lead .what{font-size:13px;color:var(--mute);margin-top:-6px}
@@ -554,6 +564,7 @@ function adsUrl(l){
 }
 function leadCard(l,i,n){
   const st=S.lead[l.id]||{};
+  const rt={HOT:'r-hot',WARM:'r-warm',COLD:'r-cold'}[String(l.rating||'').toUpperCase()];
   const ads={none:['0 ads','a-none'],few:['Few ads','a-few'],many:['Many ads','a-many']}[l.ads]||['Check ads','a-unk'];
   const dm=esc(l.dm||'').replace(/\[[^\]]+\]/g,m=>`<span class="ph">${m}</span>`);
   const ig=String(l.instagram||'').replace(/^@/,'');
@@ -561,9 +572,10 @@ function leadCard(l,i,n){
   const site=l.website?(/^https?:/.test(l.website)?l.website:'https://'+l.website):'';
   return `<article class="lead" style="--i:${i}">
     <div class="lh"><div><h3>${esc(l.brand)}</h3><div class="num">${i+1} / ${n}</div></div>
-      <div class="chips" style="justify-content:flex-end">${l.category?`<span class="chip">${esc(l.category)}</span>`:''}${country?`<span class="chip">${esc(country)}</span>`:''}<span class="chip ${ads[1]}">${ads[0]}</span></div></div>
+      <div class="chips" style="justify-content:flex-end">${rt?`<span class="chip ${rt}">${esc(String(l.rating).toUpperCase())}</span>`:''}${l.category?`<span class="chip">${esc(l.category)}</span>`:''}${country?`<span class="chip">${esc(country)}</span>`:''}<span class="chip ${ads[1]}">${ads[0]}</span></div></div>
     ${l.what?`<div class="what">${esc(l.what)}</div>`:''}
     ${l.why?`<div class="why">${esc(l.why)}</div>`:''}
+    ${l.signal?`<div class="sig"><b>Rating reason</b>${esc(l.signal)}</div>`:''}
     <div><div class="dmlbl">Instagram DM${l.lang==='es'?' · Spanish':''}</div><div class="dmbox">${dm||'<span class="none">No DM yet</span>'}</div></div>
     <div class="acts2">
       <button class="pbtn pri" data-act="copydm" data-id="${esc(l.id)}">Copy DM</button>
@@ -573,6 +585,7 @@ function leadCard(l,i,n){
     </div>
     <div class="contact">${l.email?`<span>${esc(l.email)}</span><button class="pbtn sm" data-act="copyemail" data-id="${esc(l.id)}">Copy email</button>`:'<span class="none">No public email · use the DM or the site form</span>'}</div>
     <div class="stages">${[['dm','DM sent'],['replied','Replied'],['call','Call'],['client','Client']].map(([k,t])=>`<button class="stg ${st[k]?'on':''}" data-act="stage" data-id="${esc(l.id)}" data-st="${k}">${t}</button>`).join('')}</div>
+    ${st.dm?`<div class="tiny"><button class="lnk" data-act="stage" data-id="${esc(l.id)}" data-st="no">${st.no?'Marked as no · tap to undo':'Said no'}</button></div>`:''}
   </article>`;
 }
 function renderLeads(){
@@ -587,10 +600,40 @@ function renderLeads(){
   const nav=`<div class="nav"><button data-act="ldnav" data-n="-1" aria-label="Older list" ${idx<=0?'style="opacity:.3"':''}>${IC.l}</button><button data-act="ldnav" data-n="1" aria-label="Newer list" ${idx>=dates.length-1?'style="opacity:.3"':''}>${IC.r}</button></div>`;
   return `<div class="top"><div><div class="kicker">${leadDay===todayKey()?"Today's leads":'List from'}</div><h1>${fmtShort(d)}</h1></div>${nav}</div>
     <section class="prog"><div class="lb">DMs sent today</div><div class="big">${sent}<small>/${tgt}</small></div><div class="tr"><div class="fl" style="width:${Math.min(100,sent/tgt*100)}%"></div></div></section>
+    ${fuSection()}
     ${list.sample?'<div class="banner">Sample list from your October prospects, just to show how this works. Real lists start arriving at 5:30 am.</div>':''}
     ${list.note?`<div class="banner">${esc(list.note)}</div>`:''}
-    <div class="sect">${leads.length} brands · tap Copy DM, send it, then mark DM sent</div>
+    <div class="sect">${leads.length} brands · confirm their content is still organic, copy the DM, send it, mark DM sent</div>
     <div class="list" style="gap:14px">${leads.map((l,i)=>leadCard(l,i,leads.length)).join('')||'<div class="empty">No brands in this list.</div>'}</div>`;
+}
+/* follow-ups (Harvey: email 2 after 3-4 days with something new; closing note a few days later; never "just checking in"; respect a no) */
+const daysBetween=(a,b)=>Math.round((parseKey(b)-parseKey(a))/864e5);
+function followupText(kind,brand,lang){
+  const es=lang==='es';
+  if(kind==='fu1')return es?`¡Hola, equipo de ${brand}! Les doy seguimiento. Las tres ideas que les mandaría son cortas: un set de fotos de producto, un reel y una variación de anuncio. Con gusto se las envío si les sirven. Daniel`
+    :`Hey ${brand} team, quick follow-up. The three ideas I'd send are short ones: one product photo set, one reel and one ad variation. Still happy to send them if useful. Daniel`;
+  return es?`¡Hola, equipo de ${brand}! Cierro aquí el hilo para no llenar su bandeja. Si algún día el contenido creativo se vuelve prioridad, estoy en acreativestudio.agency. Daniel`
+    :`Hey ${brand} team, I'll close the loop here so I don't clutter your inbox. If creative ever becomes a priority, I'm at acreativestudio.agency. Daniel`;
+}
+function dueFollowups(){
+  const tk=todayKey(),out=[];
+  Object.entries(S.lead).forEach(([id,st])=>{
+    if(!st.dm||st.replied||st.no||st.call||st.client)return;
+    if(!st.fu1&&daysBetween(st.dm,tk)>=3)out.push({id,st,kind:'fu1',days:daysBetween(st.dm,tk)});
+    else if(st.fu1&&!st.fu2&&daysBetween(st.fu1,tk)>=4)out.push({id,st,kind:'fu2',days:daysBetween(st.fu1,tk)});
+  });
+  return out.sort((a,b)=>b.days-a.days);
+}
+function fuSection(){
+  const due=dueFollowups();if(!due.length)return '';
+  return `<div class="sect">Follow-ups due · ${due.length}</div><div class="list" style="gap:12px">${due.map(f=>{
+    const brand=f.st.b||f.id,ig=String(f.st.ig||'').replace(/^@/,''),txt=followupText(f.kind,brand,f.st.lang);
+    return `<article class="fu"><div><h4>${esc(brand)}</h4><div class="meta">${f.kind==='fu1'?'Follow-up 1':'Closing note'} · ${f.days} days ${f.kind==='fu1'?'since your DM':'since follow-up 1'}</div></div>
+      <div class="dmbox">${esc(txt)}</div>
+      <div class="acts2"><button class="pbtn pri" data-act="copyfu" data-id="${esc(f.id)}" data-k="${f.kind}">Copy</button>
+      ${ig?`<a class="pbtn" href="https://instagram.com/${encodeURIComponent(ig)}" target="_blank" rel="noopener">@${esc(ig)}</a>`:''}
+      <button class="pbtn sm" data-act="fusent" data-id="${esc(f.id)}" data-k="${f.kind}">Mark sent</button>
+      <button class="pbtn sm" data-act="stage" data-id="${esc(f.id)}" data-st="no">Said no</button></div></article>`}).join('')}</div>`;
 }
 function findLead(id){for(const d of leadDates().reverse()){const l=(S.lists[d].leads||[]).find(x=>x.id===id);if(l)return l}return null}
 function copyText(t){
@@ -688,12 +731,19 @@ document.addEventListener('click',e=>{
   else if(a==='pday'){planDay=n;render()}
   else if(a==='close'){closeSheet()}
   else if(a==='ldnav'){const ds=leadDates(),i=ds.indexOf(leadDay)+n;if(i>=0&&i<ds.length){leadDay=ds[i];render()}}
+  else if(a==='copyfu'){const st=S.lead[id];if(st)copyText(followupText(b.dataset.k,st.b||id,st.lang))}
+  else if(a==='fusent'){const st=S.lead[id];if(st){st[b.dataset.k]=todayKey();save();render(true);toast('Follow-up logged')}}
   else if(a==='copydm'){const l=findLead(id);if(l)copyText(l.dm||'')}
   else if(a==='copyemail'){const l=findLead(id);if(l)copyText(l.email||'')}
   else if(a==='stage'){
     const k=b.dataset.st,tk=todayKey(),st=S.lead[id]||(S.lead[id]={});
     if(st[k]){const was=st[k];delete st[k];if(k==='dm'&&was===tk)adjustOutreach(-1)}
-    else{st[k]=tk;if(k==='dm')adjustOutreach(1);if(k!=='dm'&&!st.dm)st.dm=tk}
+    else{
+      st[k]=tk;const L=findLead(id);
+      if(L&&!st.b){st.b=L.brand;st.ig=L.instagram||'';st.lang=L.lang||'en'}
+      if(k==='dm')adjustOutreach(1);
+      if(['replied','call','client'].includes(k)&&!st.dm)st.dm=tk;
+    }
     save();render(true);
   }
   else if(a==='toggle'){
