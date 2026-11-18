@@ -1,110 +1,210 @@
 {
- "note": "Brands already delivered. Never repeat any of these. Append each new brand after delivering it.",
- "brands": [
-  {
-   "id": "howtea",
-   "brand": "How Tea",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "figlia",
-   "brand": "Figlia",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "summercamp",
-   "brand": "Summer Camp",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "visitor",
-   "brand": "Visitor",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "halfday",
-   "brand": "Halfday",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "tilden",
-   "brand": "Tilden",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "kombu",
-   "brand": "KOMBU",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "launa",
-   "brand": "Launa",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "lifeloophealth",
-   "brand": "Life Loop Health",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "solbiome",
-   "brand": "SolBiome",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "gutbff",
-   "brand": "gutBFF",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "betterblends",
-   "brand": "Better Blends",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "thirstee",
-   "brand": "Thirstee",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "keeorganics",
-   "brand": "KEE Organics",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "loamscience",
-   "brand": "LOAM Science",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "woodenspoonherbs",
-   "brand": "Wooden Spoon Herbs",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "juna",
-   "brand": "Juna",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "dieuxskin",
-   "brand": "Dieux Skin",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "yesday",
-   "brand": "Yes Day",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "sincerelyyours",
-   "brand": "Sincerely Yours",
-   "firstSeen": "2026-10"
-  },
-  {
-   "id": "arey",
-   "brand": "Arey",
-   "firstSeen": "2026-10"
-  }
- ]
+  "note": "Brands already delivered. Never repeat any of these. Append each new brand after delivering it.",
+  "brands": [
+    {
+      "id": "howtea",
+      "brand": "How Tea",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "figlia",
+      "brand": "Figlia",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "summercamp",
+      "brand": "Summer Camp",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "visitor",
+      "brand": "Visitor",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "halfday",
+      "brand": "Halfday",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "tilden",
+      "brand": "Tilden",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "kombu",
+      "brand": "KOMBU",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "launa",
+      "brand": "Launa",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "lifeloophealth",
+      "brand": "Life Loop Health",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "solbiome",
+      "brand": "SolBiome",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "gutbff",
+      "brand": "gutBFF",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "betterblends",
+      "brand": "Better Blends",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "thirstee",
+      "brand": "Thirstee",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "keeorganics",
+      "brand": "KEE Organics",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "loamscience",
+      "brand": "LOAM Science",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "woodenspoonherbs",
+      "brand": "Wooden Spoon Herbs",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "juna",
+      "brand": "Juna",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "dieuxskin",
+      "brand": "Dieux Skin",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "yesday",
+      "brand": "Yes Day",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "sincerelyyours",
+      "brand": "Sincerely Yours",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "arey",
+      "brand": "Arey",
+      "firstSeen": "2026-10"
+    },
+    {
+      "id": "arrival",
+      "brand": "Arrival",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "2o3",
+      "brand": "2O3",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "trubond",
+      "brand": "TruBond",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "pemi",
+      "brand": "Pemi",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "foryou",
+      "brand": "ForYou",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "efpybeauty",
+      "brand": "Efpy Beauty",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "evenmouth",
+      "brand": "Evenmouth",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "lewie",
+      "brand": "Lewie",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "vitanna",
+      "brand": "Vitanna",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "emotionslabs",
+      "brand": "Emotions Labs",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "somostierra",
+      "brand": "Somos Tierra",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "charmsocialtonic",
+      "brand": "Charm Social Tonic",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "solzi",
+      "brand": "SOLZI",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "pillylabs",
+      "brand": "Pilly Labs",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "seramattina",
+      "brand": "Sera & Mattina",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "gummylife",
+      "brand": "Gummy Life",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "vidabebida",
+      "brand": "Vida Bebida",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "maramoli",
+      "brand": "Mar Amoli",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "dappledtonic",
+      "brand": "Dappled Tonic",
+      "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "sensewellness",
+      "brand": "Sense Wellness",
+      "firstSeen": "2026-11-18"
+    }
+  ]
 }
