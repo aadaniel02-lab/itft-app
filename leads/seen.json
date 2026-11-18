@@ -1,0 +1,110 @@
+{
+ "note": "Brands already delivered. Never repeat any of these. Append each new brand after delivering it.",
+ "brands": [
+  {
+   "id": "howtea",
+   "brand": "How Tea",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "figlia",
+   "brand": "Figlia",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "summercamp",
+   "brand": "Summer Camp",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "visitor",
+   "brand": "Visitor",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "halfday",
+   "brand": "Halfday",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "tilden",
+   "brand": "Tilden",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "kombu",
+   "brand": "KOMBU",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "launa",
+   "brand": "Launa",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "lifeloophealth",
+   "brand": "Life Loop Health",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "solbiome",
+   "brand": "SolBiome",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "gutbff",
+   "brand": "gutBFF",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "betterblends",
+   "brand": "Better Blends",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "thirstee",
+   "brand": "Thirstee",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "keeorganics",
+   "brand": "KEE Organics",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "loamscience",
+   "brand": "LOAM Science",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "woodenspoonherbs",
+   "brand": "Wooden Spoon Herbs",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "juna",
+   "brand": "Juna",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "dieuxskin",
+   "brand": "Dieux Skin",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "yesday",
+   "brand": "Yes Day",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "sincerelyyours",
+   "brand": "Sincerely Yours",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "arey",
+   "brand": "Arey",
+   "firstSeen": "2026-10"
+  }
+ ]
+}

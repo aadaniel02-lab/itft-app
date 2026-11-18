@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-17",
+ "sample": true,
+ "leads": [
+  {
+   "id": "howtea",
+   "brand": "How Tea",
+   "category": "Beverage",
+   "country": "US",
+   "lang": "en",
+   "ads": "none",
+   "what": "Functional iced tea with 0% alcohol, mood-based flavors.",
+   "why": "New brand with two mood-based flavors: a good angle for product content. No active ads found.",
+   "email": "info@howteayall.com",
+   "instagram": "@howteayall",
+   "website": "howteayall.com",
+   "dm": "Hey! [post you liked.] How Tea's mood-based flavors are great on camera. I'm Daniel, I run a.creative studio: reels, photos and Meta ads for product brands. Mind if I send 3 quick ideas?"
+  },
+  {
+   "id": "figlia",
+   "brand": "Figlia",
+   "category": "Beverage",
+   "country": "US",
+   "lang": "en",
+   "ads": "none",
+   "what": "Non-alcoholic aperitif, no preservatives, no added sugar.",
+   "why": "Elegant-looking product, very visual for photo and video. No active ads found.",
+   "email": "allears@drinkfiglia.com",
+   "instagram": "@drinkfiglia",
+   "website": "drinkfiglia.com",
+   "dm": "Hey! [post you liked.] Figlia looks as good as it sounds. I'm Daniel, I run a.creative studio: reels, photos and Meta ads for product brands. Mind if I send 3 quick ideas?"
+  },
+  {
+   "id": "summercamp",
+   "brand": "Summer Camp",
+   "category": "Beverage",
+   "country": "US",
+   "lang": "en",
+   "ads": "none",
+   "what": "Just-add-water iced tea, four flavors.",
+   "why": "Four flavors give material for several product creatives. No active ads found.",
+   "email": "",
+   "instagram": "@drinksummercamp",
+   "website": "drinksummercamp.com",
+   "dm": "Hey! [post you liked.] Four just-add-water flavors is a lot of content waiting to happen. I'm Daniel, I run a.creative studio: reels, photos and Meta ads for product brands. Mind if I send 3 quick ideas?"
+  }
+ ]
+}
