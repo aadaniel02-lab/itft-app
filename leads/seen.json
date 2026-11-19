@@ -205,6 +205,101 @@
       "id": "sensewellness",
       "brand": "Sense Wellness",
       "firstSeen": "2026-11-18"
+    },
+    {
+      "id": "dynasty",
+      "brand": "Dynasty",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "prox",
+      "brand": "Prox",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "zouck",
+      "brand": "Zouck",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "probiotika",
+      "brand": "Probiotika",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "bebidaviva",
+      "brand": "Bebida Viva",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "tart",
+      "brand": "Tart",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "plainspeak",
+      "brand": "Plainspeak",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "vyve",
+      "brand": "VYVE",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "inseasonskin",
+      "brand": "In Season Skin",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "morethannine",
+      "brand": "More Than Nine",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "stripit",
+      "brand": "StripIt",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "yombeauty",
+      "brand": "Yom Beauty",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "kokomiskincare",
+      "brand": "Kokomi Skincare",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "quiin",
+      "brand": "Quiin",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "ashnaturalconcept",
+      "brand": "ASH Natural Concept",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "brujasana",
+      "brand": "Bruja Sana",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "dearbiology",
+      "brand": "Dear Biology",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "halfcaff",
+      "brand": "Half Caff",
+      "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "supsyrup",
+      "brand": "Sup Syrup",
+      "firstSeen": "2026-11-19"
     }
   ]
 }
