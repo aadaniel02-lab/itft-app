@@ -300,6 +300,41 @@
       "id": "supsyrup",
       "brand": "Sup Syrup",
       "firstSeen": "2026-11-19"
+    },
+    {
+      "id": "landaadaptogenos",
+      "brand": "Landa Adaptógenos",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "umani",
+      "brand": "Umani",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "teiacosmeticos",
+      "brand": "Teia Cosméticos",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "dominga",
+      "brand": "Dominga Kombucha",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "dotti",
+      "brand": "Dotti",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "seltz",
+      "brand": "Seltz",
+      "firstSeen": "2026-11-21"
+    },
+    {
+      "id": "botanicus",
+      "brand": "Botanicus",
+      "firstSeen": "2026-11-21"
     }
   ]
 }
