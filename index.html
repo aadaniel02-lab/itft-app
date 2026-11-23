@@ -610,8 +610,8 @@ function renderLeads(){
 const daysBetween=(a,b)=>Math.round((parseKey(b)-parseKey(a))/864e5);
 function followupText(kind,brand,lang){
   const es=lang==='es';
-  if(kind==='fu1')return es?`¡Hola, equipo de ${brand}! Les doy seguimiento. Las tres ideas que les mandaría son cortas: un set de fotos de producto, un reel y una variación de anuncio. Con gusto se las envío si les sirven. Daniel`
-    :`Hey ${brand} team, quick follow-up. The three ideas I'd send are short ones: one product photo set, one reel and one ad variation. Still happy to send them if useful. Daniel`;
+  if(kind==='fu1')return es?`¡Hola, equipo de ${brand}! Les doy seguimiento. Las tres ideas que les mandaría son cortas: un set de fotos, un reel y un carrusel. Con gusto se las envío si les sirven. Daniel`
+    :`Hey ${brand} team, quick follow-up. The three ideas I'd send are short ones: one photo set, one reel and one carousel. Still happy to send them if useful. Daniel`;
   return es?`¡Hola, equipo de ${brand}! Cierro aquí el hilo para no llenar su bandeja. Si algún día el contenido creativo se vuelve prioridad, estoy en acreativestudio.agency. Daniel`
     :`Hey ${brand} team, I'll close the loop here so I don't clutter your inbox. If creative ever becomes a priority, I'm at acreativestudio.agency. Daniel`;
 }
