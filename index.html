@@ -610,16 +610,17 @@ function renderLeads(){
 const daysBetween=(a,b)=>Math.round((parseKey(b)-parseKey(a))/864e5);
 function followupText(kind,brand,lang){
   const es=lang==='es';
-  if(kind==='fu1')return es?`¡Hola, equipo de ${brand}! Les doy seguimiento. Las tres ideas que les mandaría son cortas: un set de fotos, un reel y un carrusel. Con gusto se las envío si les sirven. Daniel`
-    :`Hey ${brand} team, quick follow-up. The three ideas I'd send are short ones: one photo set, one reel and one carousel. Still happy to send them if useful. Daniel`;
+  if(kind==='fu1')return es?`¡Hola, equipo de ${brand}! Retomo nuestra conversación. Las tres ideas son cortas: un set de fotos, un reel y un carrusel. Te las mando cuando quieras, ¿te late? Daniel`
+    :`Hey ${brand} team, picking up our chat. The three ideas are short ones: one photo set, one reel and one carousel. Happy to send them whenever works. Daniel`;
   return es?`¡Hola, equipo de ${brand}! Cierro aquí el hilo para no llenar su bandeja. Si algún día el contenido creativo se vuelve prioridad, estoy en acreativestudio.agency. Daniel`
     :`Hey ${brand} team, I'll close the loop here so I don't clutter your inbox. If creative ever becomes a priority, I'm at acreativestudio.agency. Daniel`;
 }
 function dueFollowups(){
   const tk=todayKey(),out=[];
   Object.entries(S.lead).forEach(([id,st])=>{
-    if(!st.dm||st.replied||st.no||st.call||st.client)return;
-    if(!st.fu1&&daysBetween(st.dm,tk)>=3)out.push({id,st,kind:'fu1',days:daysBetween(st.dm,tk)});
+    /* only leads Daniel marked as Replied (and not yet call/client/no); a DM with no reply never creates a follow-up task */
+    if(!st.replied||st.no||st.call||st.client)return;
+    if(!st.fu1&&daysBetween(st.replied,tk)>=3)out.push({id,st,kind:'fu1',days:daysBetween(st.replied,tk)});
     else if(st.fu1&&!st.fu2&&daysBetween(st.fu1,tk)>=4)out.push({id,st,kind:'fu2',days:daysBetween(st.fu1,tk)});
   });
   return out.sort((a,b)=>b.days-a.days);
@@ -628,7 +629,7 @@ function fuSection(){
   const due=dueFollowups();if(!due.length)return '';
   return `<div class="sect">Follow-ups due · ${due.length}</div><div class="list" style="gap:12px">${due.map(f=>{
     const brand=f.st.b||f.id,ig=String(f.st.ig||'').replace(/^@/,''),txt=followupText(f.kind,brand,f.st.lang);
-    return `<article class="fu"><div><h4>${esc(brand)}</h4><div class="meta">${f.kind==='fu1'?'Follow-up 1':'Closing note'} · ${f.days} days ${f.kind==='fu1'?'since your DM':'since follow-up 1'}</div></div>
+    return `<article class="fu"><div><h4>${esc(brand)}</h4><div class="meta">${f.kind==='fu1'?'Follow-up 1':'Closing note'} · ${f.days} days ${f.kind==='fu1'?'since they replied':'since follow-up 1'}</div></div>
       <div class="dmbox">${esc(txt)}</div>
       <div class="acts2"><button class="pbtn pri" data-act="copyfu" data-id="${esc(f.id)}" data-k="${f.kind}">Copy</button>
       ${ig?`<a class="pbtn" href="https://instagram.com/${encodeURIComponent(ig)}" target="_blank" rel="noopener">@${esc(ig)}</a>`:''}
