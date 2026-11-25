@@ -525,6 +525,31 @@
       "id": "driftology",
       "brand": "Driftology",
       "firstSeen": "2026-11-24"
+    },
+    {
+      "id": "tenneyson",
+      "brand": "Tenneyson",
+      "firstSeen": "2026-11-25"
+    },
+    {
+      "id": "garzarosa",
+      "brand": "Garza Rosa",
+      "firstSeen": "2026-11-25"
+    },
+    {
+      "id": "cielosur",
+      "brand": "Cielo Sur Cosmética Natural",
+      "firstSeen": "2026-11-25"
+    },
+    {
+      "id": "paradisemx",
+      "brand": "Paradise MX",
+      "firstSeen": "2026-11-25"
+    },
+    {
+      "id": "elanutrition",
+      "brand": "Ela Nutrition",
+      "firstSeen": "2026-11-25"
     }
   ]
 }
