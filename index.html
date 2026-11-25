@@ -287,24 +287,24 @@ function defaultTemplate(){
   const match=B('match','Match','21:00','22:30','fixed','body');
   const R=(s,e)=>B('res','Research leads','%s'.replace('%s',s),e,'count','work',"Review today's 20 brands");
   const O=(s,e)=>B('out','Outreach','%s'.replace('%s',s),e,'count','work','DMs · 20 brands',20);
-  const E=(s,e)=>B('mail','Send emails',s,e,'count','work','Send the batch to the same 20');
+  const P=(s,e)=>B('post','Post to Instagram',s,e,'count','work','Upload what the Posts tab says for today');
   const S=(s,e)=>B('smp','Creation of samples',s,e,'opt','work','Optional · only for brands that replied');
-  const afterSchool=()=>[R('16:45','17:30'),O('17:30','18:30'),E('18:30','19:15'),S('19:30','20:30')];
+  const afterSchool=post=>[R('16:45','17:30'),O('17:30','18:30'),...(post?[P('18:30','19:15')]:[]),S('19:30','20:30')];
   const t={0:[]};
-  t[1]=[school,deepAfter,gym,...afterSchool(),match];
-  t[3]=[school,deepAfter,gym,...afterSchool()];
-  t[4]=[school,deepAfter,gym,...afterSchool(),match];
-  t[5]=[school,deepAfter,gym,...afterSchool()];
+  t[1]=[school,deepAfter,gym,...afterSchool(true),match];
+  t[3]=[school,deepAfter,gym,...afterSchool(true)];
+  t[4]=[school,deepAfter,gym,...afterSchool(false),match];
+  t[5]=[school,deepAfter,gym,...afterSchool(true)];
   t[2]=[
     B('deep','Deep client work','08:00','11:30','count','work','Ads · creatives · client work'),
-    R('12:30','13:15'),O('13:15','14:15'),E('14:15','15:00'),
+    R('12:30','13:15'),O('13:15','14:15'),
     gym,
     B('soccer','Soccer practice','17:30','19:00','count','body'),
     S('19:30','20:30')
   ];
   t[6]=[
     B('deep','Deep client work','09:00','12:00','count','work','Ads · creatives · client work'),
-    R('12:30','13:15'),O('13:15','14:15'),E('14:15','15:00'),
+    R('12:30','13:15'),O('13:15','14:15'),
     S('15:00','16:00'),
     B('end','Work ends','16:00','16:00','fixed','life','Everything after this is free time'),
     B('golf','Golf','16:30','19:00','opt','body','Optional · adjust the time')
@@ -319,16 +319,44 @@ function normalizeAll(S){
   Object.values(S.days).forEach(d=>{if(d.snap)d.snap.forEach(norm)});
   return S;
 }
-let S=load();S.lists=S.lists||{};S.lead=S.lead||{};
+/* ---------- content plan (fixed weekly calendar; Sunday = production day with Claude) ---------- */
+// 4 feed posts + 4 stories a week = 8 reels, 4 carousels, 4 photos and 16 stories a month
+const POSTPLAN={
+  1:[['reel','Reel'],['story','Story']],
+  3:[['carousel','Carousel'],['story','Story']],
+  5:[['reel','Reel'],['story','Story']],
+  0:[['photo','Photo'],['story','Story']]
+};
+const POSTNOTE={reel:'Ends with the DM card',carousel:'Last slide is the DM card',photo:'DM line in the caption',story:'DM sticker on it'};
+const postsOf=k=>POSTPLAN[parseKey(k).getDay()]||[];
+function postsDoneCount(k){const d=(S.posts&&S.posts[k])||{};return postsOf(k).filter(([id])=>d[id]).length}
+function syncPostBlock(k){
+  const items=postsOf(k);if(!items.length)return;
+  const day=S.days[k]||(S.days[k]={done:{},extras:[]});
+  if(postsDoneCount(k)===items.length)day.done.post=1;else delete day.done.post;
+}
+function migrateTemplate(S){
+  if(S.tplv>=2)return;
+  [1,2,3,4,5,6].forEach(wd=>{
+    const a=S.template[wd];if(!a)return;
+    const i=a.findIndex(b=>b.id==='mail');if(i<0)return;
+    if([1,3,5].includes(wd)&&!a.some(b=>b.id==='post')){
+      a[i]=B('post','Post to Instagram',a[i].start,a[i].end,'count','work','Upload what the Posts tab says for today');
+    }else a.splice(i,1);
+  });
+  S.tplv=2;
+}
+let S=load();S.lists=S.lists||{};S.lead=S.lead||{};S.posts=S.posts||{};migrateTemplate(S);
+if(S.tplv==null)S.tplv=2;
 function load(){
   try{const r=JSON.parse(localStorage.getItem(LS_KEY));if(r&&r.template&&r.days)return normalizeAll(r)}catch(e){}
   try{ // carry history over from the first version, with the new plan
     const o=JSON.parse(localStorage.getItem(LS_OLD));
-    if(o&&o.days)return normalizeAll({start:o.start,wake:o.wake||'06:30',sleep:o.sleep||'22:30',template:defaultTemplate(),days:o.days});
+    if(o&&o.days)return normalizeAll({start:o.start,wake:o.wake||'06:30',sleep:o.sleep||'22:30',template:defaultTemplate(),days:o.days,tplv:2});
   }catch(e){}
   const now=new Date();
   const start=keyOf(now.getHours()>=20?addDays(now,1):now);
-  return {start,wake:'06:30',sleep:'22:30',template:defaultTemplate(),days:{}};
+  return {start,wake:'06:30',sleep:'22:30',template:defaultTemplate(),days:{},tplv:2};
 }
 function save(){try{localStorage.setItem(LS_KEY,JSON.stringify(S))}catch(e){}}
 const blocksFor=k=>{const d=S.days[k];return d&&d.snap?d.snap:(S.template[parseKey(k).getDay()]||[])};
@@ -368,12 +396,13 @@ function period(keys){
 const weekKeys=mon=>[0,1,2,3,4,5].map(i=>keyOf(addDays(mon,i)));
 
 /* ---------- ui state ---------- */
-let view='today',cur=todayKey(),weekOff=0,monthOff=0,planDay=1,lastToday=todayKey(),leadDay=null;
+let view='today',cur=todayKey(),weekOff=0,monthOff=0,planDay=1,lastToday=todayKey(),leadDay=null,postOff=0;
 
 const IC={
   today:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 9.5"/></svg>',
   week:'<svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>',
   month:'<svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>',
+  posts:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".8"/></svg>',
   leads:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8 9.5h8M8 12.5h5"/></svg>',
   plan:'<svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>',
   l:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
@@ -382,7 +411,7 @@ const IC={
   chk:'<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
 };
 function renderTabs(){
-  const T=[['today','Today'],['leads','Leads'],['week','Week'],['month','Month'],['plan','Plan']];
+  const T=[['today','Today'],['leads','Leads'],['posts','Posts'],['week','Week'],['month','Month'],['plan','Plan']];
   $('#tabs').innerHTML=T.map(([k,l])=>`<button data-act="tab" data-v="${k}" class="${view===k?'on':''}">${IC[k]}<span>${l}</span></button>`).join('');
 }
 const brandBar='<div class="brand"><img src="logo.png" alt="a.creative studio"><b>a.creative studio</b><em>ITFT</em></div>';
@@ -419,7 +448,7 @@ function weekSummary(k){
   const mon=mondayOf(parseKey(k)),p=period(weekKeys(mon));
   return {p,itft:p.avg==null?null:100-p.avg};
 }
-const MQ='Research  •  Outreach  •  Emails  •  Follow through  •  ';
+const MQ='Research  •  Outreach  •  Content  •  Follow through  •  ';
 function renderToday(){
   const key=cur,d=parseKey(key),wd=d.getDay(),isToday=key===todayKey(),fut=key>todayKey();
   const head=`<div class="top"><div><div class="kicker">${DAYN[wd]}</div><h1>${fmtShort(d)}</h1></div>
@@ -427,8 +456,10 @@ function renderToday(){
     ${isToday?'':'<button class="backtoday" data-act="gotoday">← Back to today</button>'}`;
   if(wd===0){
     const w=weekSummary(key);
-    return head+weekHero(w,'Week result · Sunday is your day off')+`<div class="sect">Day off</div>
-      <div class="item fixed" style="--i:1"><div class="body"><div class="ttl">Nothing to do. Recharge.</div><div class="note">Your six days average into the week's ITFT above.</div></div></div>`+
+    const ps=(S.posts&&S.posts[key])||{},tot=postsOf(key).length,dn=postsDoneCount(key);
+    return head+weekHero(w,'Week result · Sunday is content day, not counted')+`<div class="sect">Content day</div>
+      <div class="list"><div class="item ${ps.session?'done':''}" style="--i:1"><div class="body"><div class="ttl">Weekly content session with Claude</div><div class="note">Make next week's 4 posts + 4 stories and save them in your folder</div></div><button class="chk" data-act="postsess" aria-label="Mark done">${IC.chk}</button></div>
+      <div class="item ${tot&&dn===tot?'done':''}" style="--i:2"><div class="body"><div class="ttl">Post today</div><div class="note">${postsOf(key).map(x=>x[1]).join(' + ')} · ${dn}/${tot} posted</div></div><button class="pbtn sm" data-act="tab" data-v="posts">Open</button></div></div>`+
       `<div class="sect">By day</div>`+weekBars(mondayOf(d))+`<div class="sect">What slipped this week</div><div class="card">${rateList(w.p.by,5)}</div>`;
   }
   const day=S.days[key]||{done:{},extras:[]};
@@ -444,6 +475,12 @@ function renderToday(){
     if(b.mode==='fixed')return `<li class="item fixed" style="--i:${i++}" data-s="${b.start}" data-e="${b.end}"><div class="when">${when}</div><div class="body"><div class="ttl">${esc(b.title)}</div>${b.note?`<div class="note">${esc(b.note)}</div>`:''}</div></li>`;
     const done=!!day.done[b.id];
     const prog=(day.prog&&day.prog[b.id])||0;
+    if(b.id==='post'){
+      const tot=postsOf(key).length,dn=postsDoneCount(key),fin=tot&&dn===tot;
+      return `<li class="item c-work ${fin?'done':''} ${live?'now':''} ${fut?'locked':''}" style="--i:${i++}" data-s="${b.start}" data-e="${b.end}">
+      <div class="when">${when}</div><div class="body"><div class="ttl">${esc(b.title)}${tag}</div><div class="note">${postsOf(key).map(x=>x[1]).join(' + ')} · ${dn}/${tot} posted</div></div>
+      <button class="pbtn sm" data-act="tab" data-v="posts">Open</button></li>`;
+    }
     const right=b.target?`<div class="stepper"><button class="stp" data-act="dec" data-id="${esc(b.id)}" aria-label="Minus one">−</button><span class="cnt">${prog}<small>/${b.target}</small></span><button class="stp plus" data-act="inc" data-id="${esc(b.id)}" aria-label="Plus one">+</button></div>`
       :`<button class="chk" data-act="toggle" data-id="${esc(b.id)}" aria-label="Mark done">${IC.chk}</button>`;
     return `<li class="item c-${b.cat==='work'?'work':b.cat==='body'?'body':'x'} ${done?'done':''} ${live?'now':''} ${fut?'locked':''}" style="--i:${i++}" data-s="${b.start}" data-e="${b.end}">
@@ -543,6 +580,23 @@ function funnelCard(c){
   const L={dm:'DMs sent',replied:'Replies',call:'Calls',client:'Clients'};
   return `<div class="sect">Funnel</div><div class="card"><div class="fun">${STAGES.map(k=>`<div><div class="fv">${c[k]}</div><div class="fl">${L[k]}</div></div>`).join('')}</div>
     <div class="weekline" style="margin:14px 0 0">${rr==null?'Mark replies on each lead to see your reply rate.':`Reply rate <b>${rr}%</b>`}</div></div>`;
+}
+
+/* ---------- POSTS ---------- */
+function renderPosts(){
+  const mon=addDays(mondayOf(new Date()),postOff*7),tk=todayKey();
+  const keys=[1,2,3,4,5,6,0].map((wd,i)=>keyOf(addDays(mon,wd===0?6:i)));
+  let tot=0,dn=0;keys.forEach(k=>{if(k<S.start&&false)return;tot+=postsOf(k).length;dn+=postsDoneCount(k)});
+  const nav=`<div class="nav"><button data-act="pw" data-n="-1" aria-label="Previous week">${IC.l}</button><button data-act="pw" data-n="1" aria-label="Next week">${IC.r}</button></div>`;
+  const cards=keys.filter(k=>postsOf(k).length).map((k,i)=>{
+    const d=parseKey(k),ps=(S.posts&&S.posts[k])||{},isT=k===tk,fut=k>tk,sun=d.getDay()===0;
+    const rows=postsOf(k).map(([id,name])=>`<div class="item ${ps[id]?'done':''} ${fut?'locked':''}" style="--i:${i}"><div class="body"><div class="ttl">${name}</div><div class="note">${POSTNOTE[id]||''}</div></div><button class="chk" data-act="postchk" data-k="${k}" data-id="${id}" aria-label="Mark posted">${IC.chk}</button></div>`).join('');
+    return `<div class="sect">${DAYN[d.getDay()]} · ${fmtShort(d)}${isT?' · today':''}</div><div class="list">${rows}${sun?`<div class="item ${ps.session?'done':''}" style="--i:${i}"><div class="body"><div class="ttl">Content session with Claude</div><div class="note">Next week's pieces, saved in your folder</div></div><button class="chk" data-act="postsess" data-k="${k}" aria-label="Mark done">${IC.chk}</button></div>`:''}</div>`;
+  }).join('');
+  return `<div class="top"><div><div class="kicker">${postOff===0?'This week':postOff===-1?'Last week':'Week of'}</div><h1>Posts</h1></div>${nav}</div>
+    <section class="prog"><div class="lb">Posted this week</div><div class="big">${dn}<small>/${tot}</small></div><div class="tr"><div class="fl" style="width:${tot?Math.min(100,dn/tot*100):0}%"></div></div></section>
+    <div class="banner" style="border-color:var(--lime);color:var(--lime)">Every reel and carousel ends the same way: DM me "IDEAS" and I'll send you 3 ideas for your product. Booking a call lives in the bio link only.</div>
+    ${cards}`;
 }
 
 /* ---------- LEADS ---------- */
@@ -666,7 +720,7 @@ function renderPlan(){
   const badge=b=>b.mode==='count'?'<span class="badge">Counts</span>':b.mode==='opt'?'<span class="badge opt">Optional</span>':'<span class="badge no">Fixed</span>';
   return `<div class="top"><div><div class="kicker">Template</div><h1>Your week</h1></div></div>
   <div class="tabs">${order.map(n=>`<button data-act="pday" data-n="${n}" class="${planDay===n?'on':''}">${DAYS3[n]}</button>`).join('')}</div>
-  <div class="list">${planDay===0?'<div class="empty">Sunday is your day off. Nothing planned.</div>':blocks.map((b,i)=>`
+  <div class="list">${planDay===0?'<div class="empty">Sunday is content day: weekly session with Claude, plus one photo and one story. Not counted in ITFT. See the Posts tab.</div>':blocks.map((b,i)=>`
     <button class="prow" style="--i:${i}" data-act="editblock" data-id="${esc(b.id)}"><span class="when">${t12(b.start).replace(' ','')}${b.start===b.end?'':'<br>'+t12(b.end).replace(' ','')}</span><span class="ttl">${esc(b.title)}</span>${badge(b)}</button>`).join('')}
   </div>
   ${planDay===0?'':`<button class="addbtn" data-act="addblock">+ Add block to ${DAYN[planDay]}</button>`}
@@ -708,7 +762,7 @@ let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on
 function render(keep){
   const y=window.scrollY;
   renderTabs();
-  const html=view==='today'?renderToday():view==='leads'?renderLeads():view==='week'?renderWeek():view==='month'?renderMonth():renderPlan();
+  const html=view==='today'?renderToday():view==='leads'?renderLeads():view==='posts'?renderPosts():view==='week'?renderWeek():view==='month'?renderMonth():renderPlan();
   $('#app').innerHTML=`<div class="view ${keep?'still':''}">${brandBar}${html}</div>`;
   animateAll();
   if(keep)window.scrollTo(0,y);else window.scrollTo(0,0);
@@ -728,6 +782,21 @@ document.addEventListener('click',e=>{
   else if(a==='day'){cur=keyOf(addDays(parseKey(cur),n));render()}
   else if(a==='gotoday'){cur=todayKey();render()}
   else if(a==='wk'){weekOff+=n;render()}
+  else if(a==='pw'){postOff=Math.min(0,postOff+n);render()}
+  else if(a==='postchk'){
+    const k=b.dataset.k;
+    if(k>todayKey()){toast('That day has not happened yet');return}
+    const ps=(S.posts[k]||(S.posts[k]={}));
+    if(ps[id])delete ps[id];else ps[id]=1;
+    syncPostBlock(k);save();render(true);
+  }
+  else if(a==='postsess'){
+    const k=b.dataset.k||cur;
+    if(k>todayKey()){toast('That day has not happened yet');return}
+    const ps=(S.posts[k]||(S.posts[k]={}));
+    if(ps.session)delete ps.session;else ps.session=1;
+    save();render(true);
+  }
   else if(a==='mo'){monthOff+=n;render()}
   else if(a==='pday'){planDay=n;render()}
   else if(a==='close'){closeSheet()}
