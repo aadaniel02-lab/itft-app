@@ -1,555 +1,625 @@
 {
-  "note": "Brands already delivered. Never repeat any of these. Append each new brand after delivering it.",
-  "brands": [
-    {
-      "id": "howtea",
-      "brand": "How Tea",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "figlia",
-      "brand": "Figlia",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "summercamp",
-      "brand": "Summer Camp",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "visitor",
-      "brand": "Visitor",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "halfday",
-      "brand": "Halfday",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "tilden",
-      "brand": "Tilden",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "kombu",
-      "brand": "KOMBU",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "launa",
-      "brand": "Launa",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "lifeloophealth",
-      "brand": "Life Loop Health",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "solbiome",
-      "brand": "SolBiome",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "gutbff",
-      "brand": "gutBFF",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "betterblends",
-      "brand": "Better Blends",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "thirstee",
-      "brand": "Thirstee",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "keeorganics",
-      "brand": "KEE Organics",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "loamscience",
-      "brand": "LOAM Science",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "woodenspoonherbs",
-      "brand": "Wooden Spoon Herbs",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "juna",
-      "brand": "Juna",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "dieuxskin",
-      "brand": "Dieux Skin",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "yesday",
-      "brand": "Yes Day",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "sincerelyyours",
-      "brand": "Sincerely Yours",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "arey",
-      "brand": "Arey",
-      "firstSeen": "2026-10"
-    },
-    {
-      "id": "arrival",
-      "brand": "Arrival",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "2o3",
-      "brand": "2O3",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "trubond",
-      "brand": "TruBond",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "pemi",
-      "brand": "Pemi",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "foryou",
-      "brand": "ForYou",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "efpybeauty",
-      "brand": "Efpy Beauty",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "evenmouth",
-      "brand": "Evenmouth",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "lewie",
-      "brand": "Lewie",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "vitanna",
-      "brand": "Vitanna",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "emotionslabs",
-      "brand": "Emotions Labs",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "somostierra",
-      "brand": "Somos Tierra",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "charmsocialtonic",
-      "brand": "Charm Social Tonic",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "solzi",
-      "brand": "SOLZI",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "pillylabs",
-      "brand": "Pilly Labs",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "seramattina",
-      "brand": "Sera & Mattina",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "gummylife",
-      "brand": "Gummy Life",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "vidabebida",
-      "brand": "Vida Bebida",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "maramoli",
-      "brand": "Mar Amoli",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "dappledtonic",
-      "brand": "Dappled Tonic",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "sensewellness",
-      "brand": "Sense Wellness",
-      "firstSeen": "2026-11-18"
-    },
-    {
-      "id": "dynasty",
-      "brand": "Dynasty",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "prox",
-      "brand": "Prox",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "zouck",
-      "brand": "Zouck",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "probiotika",
-      "brand": "Probiotika",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "bebidaviva",
-      "brand": "Bebida Viva",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "tart",
-      "brand": "Tart",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "plainspeak",
-      "brand": "Plainspeak",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "vyve",
-      "brand": "VYVE",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "inseasonskin",
-      "brand": "In Season Skin",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "morethannine",
-      "brand": "More Than Nine",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "stripit",
-      "brand": "StripIt",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "yombeauty",
-      "brand": "Yom Beauty",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "kokomiskincare",
-      "brand": "Kokomi Skincare",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "quiin",
-      "brand": "Quiin",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "ashnaturalconcept",
-      "brand": "ASH Natural Concept",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "brujasana",
-      "brand": "Bruja Sana",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "dearbiology",
-      "brand": "Dear Biology",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "halfcaff",
-      "brand": "Half Caff",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "supsyrup",
-      "brand": "Sup Syrup",
-      "firstSeen": "2026-11-19"
-    },
-    {
-      "id": "landaadaptogenos",
-      "brand": "Landa Adaptógenos",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "umani",
-      "brand": "Umani",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "teiacosmeticos",
-      "brand": "Teia Cosméticos",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "dominga",
-      "brand": "Dominga Kombucha",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "dotti",
-      "brand": "Dotti",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "seltz",
-      "brand": "Seltz",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "botanicus",
-      "brand": "Botanicus",
-      "firstSeen": "2026-11-21"
-    },
-    {
-      "id": "saponiq",
-      "brand": "SaponiQ",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "aurive",
-      "brand": "Aurive",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "sparklewellness",
-      "brand": "Sparkle Wellness",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "navimocktails",
-      "brand": "Navi Mocktails",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "wipeoutbeverages",
-      "brand": "Wipeout Beverages",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "sarilla",
-      "brand": "Sarilla",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "kerativ",
-      "brand": "Kerativ",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "000skin",
-      "brand": "000SKIN",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "guthop",
-      "brand": "GUTHOP",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "moodzee",
-      "brand": "Moodzee",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "muxum",
-      "brand": "Muxum",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "kombuchamiamor",
-      "brand": "Kombucha Mi Amor",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "kierokombucha",
-      "brand": "Kiero Kombucha",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "sunello",
-      "brand": "Sunello",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "nabeverageco",
-      "brand": "NA Beverage Co.",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "elisexelisia",
-      "brand": "elise x elisia",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "timebeambeauty",
-      "brand": "Timebeam Beauty",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "kuit",
-      "brand": "KUIT",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "annapurnakombucha",
-      "brand": "Annapurna Kombucha",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "proyectobotanico",
-      "brand": "Proyecto Botánico",
-      "firstSeen": "2026-11-23"
-    },
-    {
-      "id": "glasrose",
-      "brand": "Glasrose",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "norie",
-      "brand": "Norie",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "bult",
-      "brand": "BULT",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "bovitahealth",
-      "brand": "Bovita Health",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "gingerlilytallow",
-      "brand": "Ginger Lily Tallow",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "tryzalt",
-      "brand": "ZALT",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "drinkvibes",
-      "brand": "VIBES Beverages",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "stursi",
-      "brand": "Stursi",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "plaidcircus",
-      "brand": "Plaid Circus",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "purelymushroom",
-      "brand": "Purely Mushroom",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "irisnutrition",
-      "brand": "Iris Nutrition",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "tallowmenow",
-      "brand": "Tallow Me Now",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "nutreluxbeauty",
-      "brand": "NutréLux Beauty",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "sveda",
-      "brand": "SVEDA",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "toothscience",
-      "brand": "ToothScience",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "casanoon",
-      "brand": "Casa Noon",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "osia",
-      "brand": "OSIA",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "driftology",
-      "brand": "Driftology",
-      "firstSeen": "2026-11-24"
-    },
-    {
-      "id": "tenneyson",
-      "brand": "Tenneyson",
-      "firstSeen": "2026-11-25"
-    },
-    {
-      "id": "garzarosa",
-      "brand": "Garza Rosa",
-      "firstSeen": "2026-11-25"
-    },
-    {
-      "id": "cielosur",
-      "brand": "Cielo Sur Cosmética Natural",
-      "firstSeen": "2026-11-25"
-    },
-    {
-      "id": "paradisemx",
-      "brand": "Paradise MX",
-      "firstSeen": "2026-11-25"
-    },
-    {
-      "id": "elanutrition",
-      "brand": "Ela Nutrition",
-      "firstSeen": "2026-11-25"
-    }
-  ]
+ "note": "Brands already delivered. Never repeat any of these. Append each new brand after delivering it.",
+ "brands": [
+  {
+   "id": "howtea",
+   "brand": "How Tea",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "figlia",
+   "brand": "Figlia",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "summercamp",
+   "brand": "Summer Camp",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "visitor",
+   "brand": "Visitor",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "halfday",
+   "brand": "Halfday",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "tilden",
+   "brand": "Tilden",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "kombu",
+   "brand": "KOMBU",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "launa",
+   "brand": "Launa",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "lifeloophealth",
+   "brand": "Life Loop Health",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "solbiome",
+   "brand": "SolBiome",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "gutbff",
+   "brand": "gutBFF",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "betterblends",
+   "brand": "Better Blends",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "thirstee",
+   "brand": "Thirstee",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "keeorganics",
+   "brand": "KEE Organics",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "loamscience",
+   "brand": "LOAM Science",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "woodenspoonherbs",
+   "brand": "Wooden Spoon Herbs",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "juna",
+   "brand": "Juna",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "dieuxskin",
+   "brand": "Dieux Skin",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "yesday",
+   "brand": "Yes Day",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "sincerelyyours",
+   "brand": "Sincerely Yours",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "arey",
+   "brand": "Arey",
+   "firstSeen": "2026-10"
+  },
+  {
+   "id": "arrival",
+   "brand": "Arrival",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "2o3",
+   "brand": "2O3",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "trubond",
+   "brand": "TruBond",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "pemi",
+   "brand": "Pemi",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "foryou",
+   "brand": "ForYou",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "efpybeauty",
+   "brand": "Efpy Beauty",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "evenmouth",
+   "brand": "Evenmouth",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "lewie",
+   "brand": "Lewie",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "vitanna",
+   "brand": "Vitanna",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "emotionslabs",
+   "brand": "Emotions Labs",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "somostierra",
+   "brand": "Somos Tierra",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "charmsocialtonic",
+   "brand": "Charm Social Tonic",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "solzi",
+   "brand": "SOLZI",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "pillylabs",
+   "brand": "Pilly Labs",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "seramattina",
+   "brand": "Sera & Mattina",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "gummylife",
+   "brand": "Gummy Life",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "vidabebida",
+   "brand": "Vida Bebida",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "maramoli",
+   "brand": "Mar Amoli",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "dappledtonic",
+   "brand": "Dappled Tonic",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "sensewellness",
+   "brand": "Sense Wellness",
+   "firstSeen": "2026-11-18"
+  },
+  {
+   "id": "dynasty",
+   "brand": "Dynasty",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "prox",
+   "brand": "Prox",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "zouck",
+   "brand": "Zouck",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "probiotika",
+   "brand": "Probiotika",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "bebidaviva",
+   "brand": "Bebida Viva",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "tart",
+   "brand": "Tart",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "plainspeak",
+   "brand": "Plainspeak",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "vyve",
+   "brand": "VYVE",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "inseasonskin",
+   "brand": "In Season Skin",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "morethannine",
+   "brand": "More Than Nine",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "stripit",
+   "brand": "StripIt",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "yombeauty",
+   "brand": "Yom Beauty",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "kokomiskincare",
+   "brand": "Kokomi Skincare",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "quiin",
+   "brand": "Quiin",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "ashnaturalconcept",
+   "brand": "ASH Natural Concept",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "brujasana",
+   "brand": "Bruja Sana",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "dearbiology",
+   "brand": "Dear Biology",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "halfcaff",
+   "brand": "Half Caff",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "supsyrup",
+   "brand": "Sup Syrup",
+   "firstSeen": "2026-11-19"
+  },
+  {
+   "id": "landaadaptogenos",
+   "brand": "Landa Adaptógenos",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "umani",
+   "brand": "Umani",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "teiacosmeticos",
+   "brand": "Teia Cosméticos",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "dominga",
+   "brand": "Dominga Kombucha",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "dotti",
+   "brand": "Dotti",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "seltz",
+   "brand": "Seltz",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "botanicus",
+   "brand": "Botanicus",
+   "firstSeen": "2026-11-21"
+  },
+  {
+   "id": "saponiq",
+   "brand": "SaponiQ",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "aurive",
+   "brand": "Aurive",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "sparklewellness",
+   "brand": "Sparkle Wellness",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "navimocktails",
+   "brand": "Navi Mocktails",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "wipeoutbeverages",
+   "brand": "Wipeout Beverages",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "sarilla",
+   "brand": "Sarilla",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "kerativ",
+   "brand": "Kerativ",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "000skin",
+   "brand": "000SKIN",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "guthop",
+   "brand": "GUTHOP",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "moodzee",
+   "brand": "Moodzee",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "muxum",
+   "brand": "Muxum",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "kombuchamiamor",
+   "brand": "Kombucha Mi Amor",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "kierokombucha",
+   "brand": "Kiero Kombucha",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "sunello",
+   "brand": "Sunello",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "nabeverageco",
+   "brand": "NA Beverage Co.",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "elisexelisia",
+   "brand": "elise x elisia",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "timebeambeauty",
+   "brand": "Timebeam Beauty",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "kuit",
+   "brand": "KUIT",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "annapurnakombucha",
+   "brand": "Annapurna Kombucha",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "proyectobotanico",
+   "brand": "Proyecto Botánico",
+   "firstSeen": "2026-11-23"
+  },
+  {
+   "id": "glasrose",
+   "brand": "Glasrose",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "norie",
+   "brand": "Norie",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "bult",
+   "brand": "BULT",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "bovitahealth",
+   "brand": "Bovita Health",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "gingerlilytallow",
+   "brand": "Ginger Lily Tallow",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "tryzalt",
+   "brand": "ZALT",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "drinkvibes",
+   "brand": "VIBES Beverages",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "stursi",
+   "brand": "Stursi",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "plaidcircus",
+   "brand": "Plaid Circus",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "purelymushroom",
+   "brand": "Purely Mushroom",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "irisnutrition",
+   "brand": "Iris Nutrition",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "tallowmenow",
+   "brand": "Tallow Me Now",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "nutreluxbeauty",
+   "brand": "NutréLux Beauty",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "sveda",
+   "brand": "SVEDA",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "toothscience",
+   "brand": "ToothScience",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "casanoon",
+   "brand": "Casa Noon",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "osia",
+   "brand": "OSIA",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "driftology",
+   "brand": "Driftology",
+   "firstSeen": "2026-11-24"
+  },
+  {
+   "id": "tenneyson",
+   "brand": "Tenneyson",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "garzarosa",
+   "brand": "Garza Rosa",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "cielosur",
+   "brand": "Cielo Sur Cosmética Natural",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "paradisemx",
+   "brand": "Paradise MX",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "elanutrition",
+   "brand": "Ela Nutrition",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "pickie",
+   "brand": "PiCKiE",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "hopkind",
+   "brand": "Hopkind",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "beaune",
+   "brand": "Beaune",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "sayso",
+   "brand": "SAYSO",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "cynic",
+   "brand": "Cynic",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "sweetr",
+   "brand": "sweetr",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "spyre",
+   "brand": "SPYRE",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "littlesaints",
+   "brand": "Little Saints",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "kuraklub",
+   "brand": "Kura Klub",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "animo",
+   "brand": "ÁNIMO",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "drinkplus",
+   "brand": "DRINKPLUS",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "abejareyna",
+   "brand": "Abeja Reyna",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "konecare",
+   "brand": "Koné Care",
+   "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "sesen",
+   "brand": "Sesēn Company",
+   "firstSeen": "2026-11-25"
+  }
+ ]
 }
