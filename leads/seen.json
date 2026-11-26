@@ -620,6 +620,106 @@
    "id": "sesen",
    "brand": "Sesēn Company",
    "firstSeen": "2026-11-25"
+  },
+  {
+   "id": "saunawater",
+   "brand": "Sauna Water",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "symbi",
+   "brand": "Symbi",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "pow",
+   "brand": "Pow",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "moonbrew",
+   "brand": "MoonBrew",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "tizz",
+   "brand": "TIZZ",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "goodwolf",
+   "brand": "Good Wolf",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "vibbo",
+   "brand": "VIBBO",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "goodbacteria",
+   "brand": "Good Bacteria",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "aluna",
+   "brand": "Aluna",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "afternoontoast",
+   "brand": "Afternoon Toast",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "rmbrkombucha",
+   "brand": "RMBR Kombucha",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "sialb",
+   "brand": "Sialbé",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "pigchi",
+   "brand": "PIGCHI",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "simbitica",
+   "brand": "Simbiótica",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "naanis",
+   "brand": "Naani's",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "nightknight",
+   "brand": "night knight",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "ayurvedist",
+   "brand": "Ayurvedist",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "blueflesh",
+   "brand": "Blue Flesh",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "commons",
+   "brand": "Commons",
+   "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "ahal",
+   "brand": "AHAL",
+   "firstSeen": "2026-11-26"
   }
  ]
 }
