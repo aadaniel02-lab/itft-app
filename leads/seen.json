@@ -720,6 +720,106 @@
    "id": "ahal",
    "brand": "AHAL",
    "firstSeen": "2026-11-26"
+  },
+  {
+   "id": "sensori",
+   "brand": "Sensori",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "goodalibi",
+   "brand": "Good Alibi",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "greenwashsoap",
+   "brand": "Greenwash Soap",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "lavanae",
+   "brand": "LAVANAĒ",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "tomafelix",
+   "brand": "Félix",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "casadelagua",
+   "brand": "Casa del Agua",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "osquoskin",
+   "brand": "OSQUO",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "tamarbody",
+   "brand": "TAMAR Body",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "skilkskin",
+   "brand": "Skilk Skin",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "gemmi",
+   "brand": "Gemmi",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "olilo",
+   "brand": "OLILO",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "zaiie",
+   "brand": "ZAIIE",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "natureofthings",
+   "brand": "Nature of Things",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "drinkbitte",
+   "brand": "Bitte Soda",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "ceibaessentials",
+   "brand": "Ceiba Essentials",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "goodonya",
+   "brand": "GoodOnya",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "wethydration",
+   "brand": "WET Hydration",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "somsleep",
+   "brand": "Som Sleep",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "hellanutrition",
+   "brand": "Hella Nutrition",
+   "firstSeen": "2026-11-27"
+  },
+  {
+   "id": "nubelob",
+   "brand": "NubeLob",
+   "firstSeen": "2026-11-27"
   }
  ]
 }
